@@ -1,0 +1,16 @@
+{
+  "steps": [
+    {
+      "name": "gender",
+      "route_link": "/questionaire/gender",
+      "previous_route": "/",
+      "next_route": "/questionaire/style"
+    },
+    {
+      "name": "style",
+      "route_link": "/questionaire/style",
+      "previous_route": "/questionaire/gender",
+      "next_route": "/checkout"
+    }
+  ]
+}

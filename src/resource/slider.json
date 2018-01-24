@@ -1,23 +1,17 @@
 {
     "slides": [
         {
-            "title" : "Luma Yoga",
-            "subtitle" : "New collection",
-            "button_text" : "Shop now",
-            "image" : "/assets/slide_01.jpg"
+            "title" : "Tracomodo",
+            "subtitle" : "Trachtenmoden Konfigurator",
+            "button_text" : "Jetzt Starten",
+            "image" : "/assets/couple1.jpg"
         },
         {
-            "title" : "Luma’s Performance Fabric",
-            "subtitle" : "Collection",
-            "button_text" : "Shop now",
-            "image" : "/assets/slide_02.jpg"
-        },
-        {
-            "title" : "Luma’s Performance Fabric",
-            "subtitle" : "What's new",
-            "button_text" : "Shop now",
-            "image" : "/assets/slide_03.jpg"
+            "title" : "Erstelle dein Trachtenoutfit",
+            "subtitle" : "Dirndl und Lederhosen",
+            "button_text" : "Jetzt Starten",
+            "image" : "/assets/group1.jpg"
         }
     ],
-    "total" : "3"
+    "total" : "2"
 }

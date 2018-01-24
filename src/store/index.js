@@ -88,6 +88,7 @@ import tax from './modules/tax'
 import social from './modules/social-tiles'
 import claims from './modules/claims'
 import sync from './modules/sync'
+import options from './modules/options'
 
 Vue.use(Vuex)
 
@@ -169,7 +170,8 @@ export default new Vuex.Store({
     checkout,
     tax,
     claims,
-    sync
+    sync,
+    options
   },
   state,
   mutations,

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './themes/default/App.vue'
+import App from './themes/tracomodo/App.vue'
 import store from './store'
 import router from './router'
 import { EventBusPlugin as EventBus } from './event-bus'
@@ -28,7 +28,7 @@ export function createApp () {
   })
 
   registerExtensions(config.registeredExtensions || [], app, router, store, config) // TODO: use config or ENV variables
-  registerTheme('default', app, router, store)
+  registerTheme('tracomodo', app, router, store)
   registerFilters(app, config)
 
   app.$emit('application-after-init', app)
@@ -41,10 +41,10 @@ export function createApp () {
 
   global.__VERSION__ = '0.2.0'
   global.__CONFIG__ = config
-  global.__TAX_COUNTRY__ = config.tax.defaultCountry || 'PL'
+  global.__TAX_COUNTRY__ = config.tax.defaultCountry || 'DE'
   global.__TAX_REGION__ = config.tax.defaultRegion || ''
-  global.__I18N_COUNTRY__ = config.i18n.defaultCountry || 'US'
-  global.__I18N_LANG__ = config.i18n.defaultLanguage || 'EN'
+  global.__I18N_COUNTRY__ = config.i18n.defaultCountry || 'DE'
+  global.__I18N_LANG__ = config.i18n.defaultLanguage || 'DE'
 
   return { app, router, store }
 }
