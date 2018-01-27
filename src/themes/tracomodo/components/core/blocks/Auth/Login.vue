@@ -1,35 +1,35 @@
 <template>
   <div>
     <div class="py35 px65 bg-lightgray">
-      <h1 class="my0">Log in</h1>
+      <h1 class="my0">Login</h1>
     </div>
     <div class="py35 px65 bg-white c-gray">
       <form @submit.prevent="login" novalidate>
         <div class="mb35">
-          <input type="email" name="email" ref="email" v-model="email" placeholder="E-mail address *">
-          <span class="validation-error" v-if="!$v.email.required">Field is required.</span>
-          <span class="validation-error" v-if="!$v.email.email">Please provide valid e-mail address.</span>
+          <input type="email" name="email" ref="email" v-model="email" placeholder="Email-Adresse *">
+          <span class="validation-error" v-if="!$v.email.required">*Erforderlich.</span>
+          <span class="validation-error" v-if="!$v.email.email">*Bitte geben Sie eine gültige Email Adresse ein.</span>
         </div>
         <div class="mb35 pass-container">
           <input :type="passType" name="password" v-model="password" placeholder="Password *">
           <i class="icon material-icons c-alto" @click="togglePassType">{{ iconName }}</i>
-          <span class="validation-error" v-if="!$v.password.required">Field is required.</span>
+          <span class="validation-error" v-if="!$v.password.required">*Erforderlich.</span>
         </div>
         <div class="row">
           <div class="col-xs-6 mb35">
             <input class="m5" type="checkbox" name="remember" id="remember">
-            <label for="remember">Remember me</label>
+            <label for="remember">Merken?</label>
           </div>
           <div class="col-xs-6 mb35 align-right">
-            <a href="#" @click.prevent="remindPassword">Forgot the password?</a>
+            <a href="#" @click.prevent="remindPassword">Passwort vergessen?</a>
           </div>
         </div>
         <div class="mb20">
-          <button-full class="btn-full p0" text="Log in to your account" @click.native="login"></button-full>
+          <button-full class="btn-full p0" text="Einloggen" @click.native="login"></button-full>
         </div>
         <input type="submit">
         <div class="center-xs">
-          <span>or <a href="#" @click.prevent="switchElem">register an account</a></span>
+          <span>noch <a href="#" @click.prevent="switchElem">kein Kunde?</a></span>
         </div>
       </form>
     </div>

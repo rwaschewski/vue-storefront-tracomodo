@@ -39,8 +39,36 @@ export default {
       this.$router.go(-1)
     },
     goNext () {
-      this.$router.push({ path: this.nextRoute })
-      this.currentStep = this.currentStep + 1
+      switch (this.currentStep) {
+        case 0:
+          if (this.$store.getters['options/gender'] !== '') {
+            this.$router.push({ path: this.nextRoute })
+            this.currentStep = this.currentStep + 1
+          } else {
+            this.$bus.$emit('notification', {
+              type: 'error',
+              message: 'Bitte wählen Sie ein Geschlecht aus!',
+              action1: { label: 'OK', action: 'close' }
+            })
+          } break
+        case 1:
+          if (this.$store.getters['options/style'] !== undefined) {
+            this.$router.push({ path: this.nextRoute })
+            this.currentStep = this.currentStep + 1
+          } else {
+            this.$bus.$emit('notification', {
+              type: 'error',
+              message: 'Bitte wählen Sie einen Style aus und mind. eine Farbe!',
+              action1: { label: 'OK', action: 'close' }
+            })
+          } break
+        default:
+          this.$bus.$emit('notification', {
+            type: 'error',
+            message: 'Ein Fehler bei der Auswahl ist aufgetreten',
+            action1: { label: 'OK', action: 'close' }
+          })
+      }
     }
   },
   computed: {

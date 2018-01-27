@@ -1,46 +1,46 @@
 <template>
   <div>
     <div class="py35 px65 bg-lightgray">
-      <h1 class="my0">Register</h1>
+      <h1 class="my0">Registrierung</h1>
     </div>
     <div class="py35 px65 bg-white c-gray">
       <form @submit.prevent="register" novalidate>
         <div class="mb35">
-          <input type="email" name="email" ref="email" v-model="email" placeholder="E-mail address *">
-          <span class="validation-error" v-if="!$v.email.required">Field is required.</span>
-          <span class="validation-error" v-if="!$v.email.email">Please provide valid e-mail address.</span>
+          <input type="email" name="email" ref="email" v-model="email" placeholder="Email-Adresse *">
+          <span class="validation-error" v-if="!$v.email.required">*Erforderlich.</span>
+          <span class="validation-error" v-if="!$v.email.email">*Bitte geben Sie eine gültige Email Adresse ein.</span>
         </div>
         <div class="row mb35">
           <div class="col-xs-6">
-            <input type="text" name="fist-name" v-model="firstName" placeholder="First name *">
-            <span class="validation-error" v-if="!$v.firstName.required">Field is required.</span>
+            <input type="text" name="fist-name" v-model="firstName" placeholder="Vorname *">
+            <span class="validation-error" v-if="!$v.firstName.required">*Erforderlich.</span>
           </div>
           <div class="col-xs-6">
-            <input type="text" name="last-name" v-model="lastName" placeholder="Last name *">
-            <span class="validation-error" v-if="!$v.lastName.required">Field is required.</span>
+            <input type="text" name="last-name" v-model="lastName" placeholder="Nachname *">
+            <span class="validation-error" v-if="!$v.lastName.required">*Erforderlich.</span>
           </div>
         </div>
         <div class="mb35 pass-container">
-          <input class="pr30" name="password" v-model="password" :type="passType.pass" placeholder="Password *">
+          <input class="pr30" name="password" v-model="password" :type="passType.pass" placeholder="Passwort *">
           <i class="icon material-icons c-alto" @click="togglePassType('pass')">{{ iconName.pass }}</i>
-            <span class="validation-error" v-if="!$v.password.required">Field is required.</span>
+            <span class="validation-error" v-if="!$v.password.required">*Erforderlich.</span>
         </div>
         <div class="mb35 pass-container">
           <input class="pr30" name="password-confirm" v-model="rPassword" :type="passType.repeatPass" placeholder="Repeat password *">
           <i class="icon material-icons c-alto" @click="togglePassType('repeatPass')">{{ iconName.repeatPass }}</i>
-          <span class="validation-error" v-if="!$v.rPassword.sameAsPassword">Passwords must be identical.</span>
+          <span class="validation-error" v-if="!$v.rPassword.sameAsPassword">Passwörter müssen übereinstimmen</span>
         </div>
         <div class="mb35">
           <input type="checkbox" name="remember" v-model="conditions" id="remember">
-          <label class="ml10" for="remember">I accept terms and conditions *</label>
-          <span class="validation-error" v-if="!$v.conditions.required">You must accept the terms and conditions.</span>
+          <label class="ml10" for="remember">Ich stimme den Allgemeinen Geschäftsbedingungen zu *</label>
+          <span class="validation-error" v-if="!$v.conditions.required">Sie müssen den Allgemeinen Geschäftsbedingungen zustimmen</span>
         </div>
         <div class="mb20">
-          <button-full class="btn-full" text="Register an account" @click.native="register"></button-full>
+          <button-full class="btn-full" text="Registrieren" @click.native="register"></button-full>
         </div>
         <input type="submit">
         <div class="center-xs">
-          <span>or <a href="#" @click.prevent="switchElem">login to your account</a></span>
+          <span>Sie sind bereits Kunde?  <a href="#" @click.prevent="switchElem">Einloggen.</a></span>
         </div>
       </form>
     </div>

@@ -7,12 +7,12 @@
       <div class="col-xs-9 col-md-11">
         <div class="row">
           <div class="col-md-12" :class="{ 'c-gray' : !isFilled && !isActive }">
-            <h3 class="m0">Review order</h3>
+            <h3 class="m0"></h3>
           </div>
         </div>
         <div class="row mb35 mt20" v-show="isActive">
           <div class="col-xs-12">
-            <p class="h4">Please check if all data are correct</p>
+            <p class="h4">Bitte überprüfen Sie, ob alle Daten korrekt sind</p>
             <div class="row">
               <div class="col-md-8  bg-lightgray p15 mb35 ml10">
                 <div class="checkboxStyled">
@@ -20,9 +20,9 @@
                   <label for="acceptTermsCheckbox"></label>
                 </div>
                 <div class="checkboxText ml15 lh25">
-                  <span class="fs16 c-darkgray">I agree to <span class="link" @click.stop="$bus.$emit('modal.toggle', 'modal-terms')">terms and conditions</span></span>
+                  <span class="fs16 c-darkgray">Ich stimme den <span class="link" @click.stop="$bus.$emit('modal.toggle', 'modal-terms')">Allgemeinen Geschäftsbedingungen</span> zu</span>
                 </div>
-                <span class="validation-error" v-if="!$v.orderReview.terms.required">Field is required</span>
+                <span class="validation-error" v-if="!$v.orderReview.terms.required">*Erforderlich</span>
               </div>
             </div>
             <div class="row">
@@ -35,7 +35,7 @@
       </div>
     </div>
     <modal name="modal-terms" static="terms">
-      <p slot="header">Terms and conditions</p>
+      <p slot="header">Allgemeine Geschäftsbedingungen</p>
     </modal>
   </div>
 </template>

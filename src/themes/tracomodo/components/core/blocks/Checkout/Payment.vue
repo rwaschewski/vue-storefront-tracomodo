@@ -7,12 +7,12 @@
       <div class="col-xs-9 col-md-11">
         <div class="row mb15">
           <div class="col-xs-12 col-md-6" :class="{ 'c-gray' : !isFilled && !isActive }">
-            <h3 class="m0 mb5">Payment</h3>
+            <h3 class="m0 mb5">Zahlung</h3>
           </div>
           <div class="col-xs-12 col-md-6 pr30">
             <div class="lh30 flex end-md" v-if="isFilled && !isActive">
               <a href="#" class="c-lightgray-secondary flex" @click.prevent="edit">
-                <span class="pr5">Edit payment</span>
+                <span class="pr5">Zahlungsart ändern</span>
                 <i class="material-icons c-lightgray-secondary">edit</i>
               </a>
             </div>
@@ -22,17 +22,17 @@
           <div v-for="(method, index) in paymentMethods" :key="index" class="col-md-6 mb15">
             <label><input type="radio" :value="method.code" name="paymentmethod" v-model="payment.paymentMethod"> {{ method.name }} | {{ method.cost | price }} </label>
           </div>
-          <span class="validation-error" v-if="!$v.payment.paymentMethod.required">Field is required</span>
+          <span class="validation-error" v-if="!$v.payment.paymentMethod.required">*Erforderlich</span>
 
           <div class="col-xs-12 my30">
-            <button-full @click.native="sendDataToCheckout" text="Go review the order" :class="{ 'ripple': true, 'button-disabled' : $v.payment.$invalid}"/>
+            <button-full @click.native="sendDataToCheckout" text="Zur Bestellübersicht" :class="{ 'ripple': true, 'button-disabled' : $v.payment.$invalid}"/>
           </div>
         </div>
         <div class="row fs16 mb35" v-show="isFilled">
           <div class="col-md-6 h4">
-            <h4>Payment method</h4>
+            <h4>Bezahlmethode</h4>
             <p>
-              Cash on delivery
+              Nachnahme
             </p>
           </div>
       </div>

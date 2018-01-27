@@ -1,14 +1,35 @@
 [
   {
-    "id": "1",
-    "type": "gender",
-    "src": "../../assets/männlich.jfif",
-    "alt": ""
-  },
-  {
-    "id": "2",
-    "type": "gender",
-    "src": "../../assets/weiblich.jpg",
-    "alt": ""
+    "genderOptions":
+    [
+      {
+        "id": "1",
+        "type": "gender",
+        "src": "../../assets/männlich.jfif",
+        "alt": "male"
+      },
+      {
+        "id": "2",
+        "type": "gender",
+        "src": "../../assets/weiblich.jpg",
+        "alt": "female"
+
+      }
+    ],
+    "styleOptions": 
+    [
+      {
+        "id": "3",
+        "type": "style",
+        "src": "",
+        "alt": ""
+      },
+      {
+        "id": "4",
+        "type": "style",
+        "src": "",
+        "alt": ""
+      }
+    ]
   }
 ]

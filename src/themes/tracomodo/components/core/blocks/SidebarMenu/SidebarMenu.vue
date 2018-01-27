@@ -14,7 +14,7 @@
             <div class="col-xs-12 h4 serif">
                 <ul class="p0 m0">
                     <li @click="closeMenu" class="brdr-bottom brdr-c-lightgray bg-white">
-                        <router-link class="px25 py20 c-black no-underline" to="/" exact>Home</router-link>
+                        <router-link class="px25 py20 c-black no-underline" to="/" exact>Startseite</router-link>
                     </li>
                     <li class="brdr-bottom brdr-c-lightgray bg-white" v-bind:key="category.slug"  @click="closeMenu" v-for='category in categories' v-if='category.product_count >0 || category.children_data.length>0' >
                         <router-link class="px25 py20 c-black no-underline" :to="{ name: 'category', params: { id: category.id, slug: category.slug }}">{{ category.name }}</router-link>
@@ -25,16 +25,16 @@
                         </ul>
                     </li>
                     <li @click="closeMenu">
-                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/magazine" exact>Magazine</router-link>
+                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/questionaire/gender" exact>Konfigurator</router-link>
                     </li>
                     <li @click="closeMenu">
-                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/sale" exact>Sale</router-link>
+                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/sale" exact>Angebote</router-link>
                     </li>
                     <li @click="closeMenu">
-                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/order-tracking" exact>Track my order</router-link>
+                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/order-tracking" exact>Bestellungen</router-link>
                     </li>
                     <li @click="closeMenu">
-                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/my-account" exact>My account</router-link>
+                        <router-link class="px25 py20 brdr-bottom brdr-c-alto c-black no-underline" to="/my-account" exact>Account</router-link>
                     </li>
                 </ul>
             </div>

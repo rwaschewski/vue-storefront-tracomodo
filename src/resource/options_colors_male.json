@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "type": "color",
+        "src": "../../assets/farbe_weiß.jpg",
+        "alt": "weiß"
+    },
+    {
+        "id": "2",
+        "type": "color",
+        "src": "../../assets/farbe_hellblau.jpg",
+        "alt": "hellblau"
+    },
+    {
+        "id": "3",
+        "type": "color",
+        "src": "../../assets/farbe_grün.jpg",
+        "alt": "grün"
+    },
+    {
+        "id": "4",
+        "type": "color",
+        "src": "../../assets/farbe_braun.jpg",
+        "alt": "braun"
+    }
+]

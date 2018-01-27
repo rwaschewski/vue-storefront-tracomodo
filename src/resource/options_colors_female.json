@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "type": "color",
+        "src": "../../assets/farbe_weiß.jpg",
+        "alt": "weiß"
+    },
+    {
+        "id": "2",
+        "type": "color",
+        "src": "../../assets/farbe_hellblau.jpg",
+        "alt": "hellblau"
+    },
+    {
+        "id": "3",
+        "type": "color",
+        "src": "../../assets/farbe_grün.jpg",
+        "alt": "grün"
+    },
+    {
+        "id": "4",
+        "type": "color",
+        "src": "../../assets/farbe_braun.jpg",
+        "alt": "braun"
+    },
+    {
+        "id": "5",
+        "type": "color",
+        "src": "../../assets/farbe_hellgrün.jpg",
+        "alt": "hellgrün"
+    },
+    {
+        "id": "6",
+        "type": "color",
+        "src": "../../assets/farbe_cyan.jpg",
+        "alt": "cyan"
+    },
+    {
+        "id": "7",
+        "type": "color",
+        "src": "../../assets/farbe_lila.jpg",
+        "alt": "lila"
+    },
+    {
+        "id": "8",
+        "type": "color",
+        "src": "../../assets/farbe_gelb.jpg",
+        "alt": "gelb"
+    }
+]

@@ -11,7 +11,7 @@
     <div class="col-md-12 product-listing row">
       <product-tile @click.native="closeSearchpanel" :key="product.id" v-for='product in products' :product="product"></product-tile>
       <transition name="fade">
-        <div v-if="emptyResults" class="center-text no-results">No results were found.</div>
+        <div v-if="emptyResults" class="center-text no-results">Keine Ergebnisse gefunden</div>
       </transition>
     </div>
 </div>
@@ -26,7 +26,7 @@ export default {
     return {
       emptyResults: false,
       search: '',
-      placeholder: 'Type what you are looking for...'
+      placeholder: 'Wonach suchen Sie? Tippen Sie hier...'
     }
   },
   components: {

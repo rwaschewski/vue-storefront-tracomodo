@@ -25,7 +25,7 @@
       <div class="container pt50">
         <div class="row center-xs">
           <div class="col-md-12">
-            <h2 class="align-center">Similar products </h2>
+            <h2 class="align-center">Ähnliche Produkte </h2>
           </div>
         </div>
       </div>

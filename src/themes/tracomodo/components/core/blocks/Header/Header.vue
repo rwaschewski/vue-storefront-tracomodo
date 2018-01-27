@@ -9,8 +9,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 center-xs">
-                    <div>
-                        <logo width="36px" height="41px"/>
+                    <div style="margin-top: 2px;">
+                        <img src="../../../../../../assets/launcher-icon-1x.png"  alt="logo" to="/" />
                     </div>
                 </div>
                 <div class="col-md-3 end-xs">
@@ -25,16 +25,17 @@
              <div class="row between-xs middle-xs px15 py5" v-if="isCheckout">
                 <div class="col-md-3 middle-xs">
                     <div>
-                        <router-link to="/" class="c-lightgray-secondary">Return to shopping</router-link>
+                        <router-link to="/" class="c-lightgray-secondary">Weiter einkaufen</router-link>
                     </div>
                 </div>
                 <div class="col-md-6 center-xs">
-                    <logo width="36px" height="41px"/>
+                    <img src="../../../../../../assets/launcher-icon-1x.png"  alt="logo" />
+                    <!--<logo width="36px" height="41px"/>-->
                 </div>
                 <div class="col-md-3 end-xs">
                     <div>
-                        <a v-if="!currentUser" href="#" @click="gotoAccount" class="c-lightgray-secondary">Login to your account</a>
-                        <span v-else>You are logged in as {{ currentUser.firstname }}</span>
+                        <a v-if="!currentUser" href="#" @click="gotoAccount" class="c-lightgray-secondary">Einloggen</a>
+                        <span v-else>Sie sind eingeloggt als {{ currentUser.firstname }}</span>
                     </div>
                 </div>
             </div>

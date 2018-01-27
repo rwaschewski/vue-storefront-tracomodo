@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "type": "gender",
+    "src": "../../assets/männlich.jfif",
+    "alt": "male"
+  },
+  {
+    "id": "2",
+    "type": "gender",
+    "src": "../../assets/weiblich.jpg",
+    "alt": "female"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "3",
+    "type": "style",
+    "src": "../../assets/lederhose_männlich1.jpg",
+    "alt": "Lederhose Klassisch"
+  },
+  {
+    "id": "4",
+    "type": "style",
+    "src": "../../assets/lederhose_männlich3.jpg",
+    "alt": "Lederhose Kurz"
+  },
+  {
+    "id": "5",
+    "type": "style",
+    "src": "../../assets/lederhose_männlich2.jpg",
+    "alt": "Lederhose Lang"
+  },
+  {
+    "id": "6",
+    "type": "style",
+    "src": "../../assets/lederhose_männlich4.jpg",
+    "alt": "Lederhose Elegant"
+  }
+]
