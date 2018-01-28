@@ -14,13 +14,16 @@
     <div class="row">
       <div class="col-md-12">
         <div class="row pb45 pt45 center-xs cool-stuff-collection">
-          <no-ssr>
-            <carousel :perPage="5" :paginationEnabled="false" :autoplay="true" :loop="true" class="col-md-12">
-              <slide class="row" v-for='product in products' v-bind:key='product.id' >
-                <product-tile class="col-md-12 collection-product" :product="product"/>
-              </slide>
-            </carousel>
-          </no-ssr>
+          <div v-for='product in products' v-bind:key='product.ASIN'>
+            <p>{{product.NAME}}</p>
+            <no-ssr>
+              <carousel :perPage="5" :paginationEnabled="false" :autoplay="true" :loop="true" class="col-md-12">
+                <slide class="row"  >
+                  <product-tile class="col-md-12 collection-product" :product="product"/>
+                </slide>
+              </carousel>
+            </no-ssr>
+          </div>
         </div>
       </div>    
     </div>
@@ -30,7 +33,6 @@
 <script>
   import NoSSR from 'vue-no-ssr'
   import { Carousel, Slide } from 'vue-carousel'
-  import builder from 'bodybuilder'
   import ProductTile from 'theme/components/core/ProductTile.vue'
 
   export default {
@@ -43,9 +45,17 @@
     },
     beforeMount () {
       let self = this
-      let inspirationsQuery = builder().query('match', 'category.name', this.category).build()
+      self.$store.dispatch('product/getProducts', {
+        gender: self.$store.getters['options/gender'],
+        style: self.$store.getters['options/style'],
+        colors: self.$store.getters['options/colors']
+      }).then(function (res) {
+        if (res) {
+          self.products = res.products
+        }
+      })
 
-      self.$store.dispatch('product/list', {
+      /* self.$store.dispatch('product/list', {
         query: inspirationsQuery,
         size: 12,
         sort: 'created_at:desc'
@@ -53,7 +63,7 @@
         if (res) {
           self.products = res.items
         }
-      })
+      }) */
     },
     components: {
       Slide,

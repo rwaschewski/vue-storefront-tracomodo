@@ -9,13 +9,15 @@
       </header>
     </div>
     <div class="row center-xs">
-      <div v-for='(product, key) in everythingNewCollection' v-bind:key='product.id' class="col-md-3">
+      <!-- <div v-for='(product, key) in everythingNewCollection' v-bind:key='product.id' class="col-md-3">
         <product-tile :instant='key < 4 ? true : false' :product="product"/>
-      </div>
+      </div> -->
+      
+      <!-- <product-collection></product-collection> -->
     </div>
   </section>
 
-  <collection title="New Luma Yoga Collection" coverImage="/assets/collection.jpg" category="Women"></collection>
+  <!--<collection title="New Luma Yoga Collection" coverImage="/assets/collection.jpg" category="Women"></collection>-->
 
   <section class="container pb60">
     <div class="row center-xs">

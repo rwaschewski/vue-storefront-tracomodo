@@ -1,7 +1,7 @@
 const state = {
   options: [],
-  gender: '',
-  style: '',
+  gender: 'male',
+  style: 'Lederhose Kniebund',
   colors: []
 }
 const getters = {

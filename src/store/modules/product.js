@@ -7,6 +7,10 @@ import { optionLabel } from 'src/store/modules/attribute'
 import { breadCrumbRoutes } from 'src/lib/filters'
 import { calculateProductTax } from 'src/lib/taxcalc'
 import _ from 'lodash'
+// import styles_men from '../../resource/options_styles_male.json'
+// import skirts from '../../resource/example_products/skirts.json'
+// import shirts_men from '../../resource/example_products/bavarianshirt_men.json'
+import pantsMen from '../../resource/example_products/leatherpants_men.json'
 
 /**
  * Calculate taxes for specific product collection
@@ -83,9 +87,23 @@ function configureProductAsync (context, { product, configuration, selectDefault
 
 // actions
 const actions = {
-
+  getProducts (context, { gender, style, colors }) {
+    let products = []
+    if (gender === 'male') {
+      if (style.includes('Kniebund') || style.includes('kniebund')) {
+        pantsMen.find(function (element) {
+          if (element.NAME.includes('Kniebund') || element.NAME.includes('kniebund')) {
+            products.push(element)
+            console.log(element.NAME)
+          }
+        })
+      }
+    }
+    context.commit(types.CATALOG_UPD_PRODUCTS, { products })
+    return products
+  },
   /**
-   * Reset current configuration and selected variatnts
+   * Reset current configuration and selected variants
    */
   reset (context) {
     const productOriginal = context.getters.productOriginal
