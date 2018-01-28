@@ -5,9 +5,9 @@
             <slide v-for='slide in slides'>
                 <div class="container" :style="{ backgroundImage: 'url(' + slide.image + ')' }">
                     <div class="row middle-xs center-xs">
-                        <div class="col-md-12 px10p">
-                            <p class="subtitle mb0 serif uppercase h3 align-center">{{ slide.subtitle }}</p>
-                            <h1 class="title mt0 mb30 align-center">{{ slide.title }}</h1>
+                        <div class="col-md-8 px10p">
+                            <p class="subtitle mb0 serif uppercase h3 align-center title-bg">{{ slide.subtitle }}</p>
+                            <h1 class="title title-bg mt0 mb30 align-center">{{ slide.title }}</h1>
                             <div class="align-center">
                                 <!--<button-outline class="button" :text="slide.button_text" color="blue" />-->
                                 <button-full class="button" :text="slide.button_text" @click.native.stop="startConf" />
@@ -62,6 +62,11 @@ h1 {
 }
 .row {
     height: 640px;
+}
+.title-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
+    padding: 5px;
 }
 @media (max-width: 75em) {
     .main-slider {
