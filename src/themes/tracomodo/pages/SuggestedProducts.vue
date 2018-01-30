@@ -1,8 +1,11 @@
 <template>
-  <div id="suggested-products">
-    <header class="col-md-12 pt40">
-      <h2 class="align-center">Vorgeschlagene Produkte</h2>
+  <div id="suggested-products" class="align-center">
+    <header class="col-md-12 pt30 pl20 pr20">
+      <h3 class="align-center">Die Produkte könnten zu Ihnen passen</h3>
     </header>
+    <div class="stepButtons">
+      <button-outline color="blue" class="button back" text="Neu" @click.native="reset" />
+    </div>
     <div class="container pb60">
       <div class="row pt15 pl20 center-md">
         <div class="col-md-9 pt20 products-list">
@@ -10,9 +13,6 @@
                 Keine passenden Produkte gefunden!
             </div>-->
             <product-listing columns="3" :products="products" />
-        </div>
-        <div class="stepButtons">
-          <button-outline color="blue" class="button back" text="Neu" @click.native="reset" />
         </div>
       </div>
     </div>
@@ -41,6 +41,8 @@ export default {
   },
   methods: {
     reset () {
+      this.$store.commit('options/RESET')
+      this.$router.push({name: 'home'})
     }
   },
   computed: mapState('product', {

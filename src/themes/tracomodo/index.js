@@ -12,7 +12,7 @@ import Style from './components/core/blocks/Questionaire/Style.vue'
 import SuggestedProducts from './pages/SuggestedProducts.vue'
 
 const routes = [
-  { path: '/', component: Home, alias: '/pwa.html' },
+  { name: 'home', path: '/', component: Home, alias: '/pwa.html' },
   //  custome routes
   { name: 'question',
     path: '/questionaire',

@@ -113,16 +113,17 @@ const actions = {
     let colorArr = colors
     stylePatternArr.forEach(function (item) {
       let stylePatt = new RegExp(item, 'gi')
-      prod.find(function (element) {
-        console.log('[DEBUG(product.js:96)]: Pattern: ' + stylePatt)
-        if (element.NAME.toLowerCase().match(stylePatt)) {
-          colorArr.find(function (color) {
-            if (element.COLOR.toLowerCase().match(new RegExp(color, 'gi'))) {
+      prod.forEach(function (element) {
+        if (element.NAME.toLowerCase().match(stylePatt) !== null) {
+          colorArr.forEach(function (color) {
+            if (element.COLOR !== null && element.COLOR !== undefined) {
+              if (element.COLOR.toLowerCase().match(new RegExp(color, 'gi')) !== null) {
+                products.push(element)
+                console.log(element.COLOR)
+              }
+            } else if (element.NAME.toLowerCase().match(new RegExp(color, 'gi')) !== null) {
               products.push(element)
-              console.log('[DEBUG(product.js:99)]: Element: ' + element)
-              console.log('[DEBUG(product.js:100)] Products:' + products)
-            } else {
-              console.log('[DEBUG]: element does not match pattern')
+              console.log(element.NAME)
             }
           })
         }

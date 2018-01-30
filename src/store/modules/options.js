@@ -26,6 +26,11 @@ const mutations = {
   },
   SET_STYLE (state, payload) {
     state.style += payload.style + ' '
+  },
+  RESET (state) {
+    state.style = ''
+    state.gender = ''
+    state.colors = []
   }
 }
 const actions = {

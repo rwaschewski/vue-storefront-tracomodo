@@ -4,10 +4,15 @@
   
   <section class="container">
     <div>
-      <router-link :to="'/suggestions'">Produkte</router-link>
       <header class="col-md-12 pt40">
         <h2 class="align-center">Neuheiten</h2>
       </header>
+    </div>
+    <div class="col-md-9 pt20 products-list">
+      <!--<div v-if="isProductListEmpty">
+          Keine passenden Produkte gefunden!
+      </div>-->
+      <!-- <product-listing columns="3" :products="everythingNewCollection" /> -->
     </div>
     <div class="row center-xs">
       <!-- <div v-for='(product, key) in everythingNewCollection' v-bind:key='product.id' class="col-md-3">
@@ -20,14 +25,14 @@
 
   <!--<collection title="New Luma Yoga Collection" coverImage="/assets/collection.jpg" category="Women"></collection>-->
 
-  <section class="container pb60">
+  <!-- <section class="container pb60">
     <div class="row center-xs">
       <header class="col-md-12 pt40">
         <h2 class="align-center">Inspirationen für Sie</h2>
       </header>
     </div>
     <tile-links />
-  </section>
+  </section> -->
   <Onboard/>
   </div>
 </template>
@@ -39,7 +44,7 @@ import builder from 'bodybuilder'
 // Base components overwrite
 import MainSlider from '../components/core/blocks/MainSlider/MainSlider.vue'
 import ProductTile from '../components/core/ProductTile.vue'
-
+import ProductListing from '../components/core/ProductListing.vue'
 import TileLinks from '../components/theme/blocks/TileLinks/TileLinks.vue'
 import Collection from '../components/theme/blocks/Collection/Collection'
 import Onboard from '../components/theme/blocks/Home/Onboard.vue'
@@ -54,7 +59,7 @@ export default {
       return this.$store.state.category.list
     },
     everythingNewCollection () {
-      return this.$store.state.homepage.new_collection
+      return this.$store.state.product.list
     },
     coolBagsCollection () {
       return this.$store.state.homepage.coolbags_collection
@@ -94,7 +99,8 @@ export default {
     MainSlider,
     TileLinks,
     Collection,
-    Onboard
+    Onboard,
+    ProductListing
   },
   mixins: [corePage('Home')]
 }
