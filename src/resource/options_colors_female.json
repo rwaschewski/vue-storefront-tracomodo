@@ -6,11 +6,24 @@
         "alt": "weiß"
     },
     {
+        "id": "10",
+        "type": "color",
+        "src": "../../assets/farbe_schwarz.jpg",
+        "alt": "schwarz"
+    },
+    {
         "id": "2",
         "type": "color",
         "src": "../../assets/farbe_hellblau.jpg",
-        "alt": "hellblau"
+        "alt": "blau"
     },
+    {
+        "id": "9",
+        "type": "color",
+        "src": "../../assets/farbe_rot.jpg",
+        "alt": "rot"
+    },
+    
     {
         "id": "3",
         "type": "color",

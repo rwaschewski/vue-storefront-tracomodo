@@ -5,9 +5,10 @@
       "NAME": "Stockerpoint - Herren Lederhose mit G\u00fcrtel, Stein Ge\u00e4scht, Thomas", 
       "KEYWORD": null, 
       "ASIN": "B01GVTYODM",
-      "COLOR": "Stein ge\u00e4scht", 
+      "COLOR": "Grün", 
       "SALE_PRICE": "EUR 139,95 - EUR 154,95", 
-      "URL": "Grau", 
+      "URL": "http://www.amazon.de/dp/B01GVTYODM",
+      "IMG": "B01GVTYODM.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -18,7 +19,8 @@
       "ASIN": "B01E2QTO22",
       "COLOR": "Braun", 
       "SALE_PRICE": "EUR 22,95", 
-      "URL": "http://www.amazon.de/dp/B01E2QTO22", 
+      "URL": "http://www.amazon.de/dp/B01E2QTO22",
+      "IMG": "B01E2QTO22.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -29,7 +31,8 @@
       "ASIN": "B075TDDHFQ",
       "COLOR": "Braun", 
       "SALE_PRICE": "EUR 79,90", 
-      "URL": "http://www.amazon.de/dp/B075TDDHFQ", 
+      "URL": "http://www.amazon.de/dp/B075TDDHFQ",
+      "IMG": "B075TDDHFQ.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -40,7 +43,8 @@
       "ASIN": "B004S2E82M",
       "COLOR": "Schwarz",
       "SALE_PRICE": "EUR 85,00 - EUR 88,00", 
-      "URL": "http://www.amazon.de/dp/B004S2E82M", 
+      "URL": "http://www.amazon.de/dp/B004S2E82M",
+      "IMG": "B004S2E82M.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -51,7 +55,8 @@
       "ASIN": "B00T99AYPY",
       "COLOR": "Braun", 
       "SALE_PRICE": "EUR 39,99 - EUR 44,99", 
-      "URL": "http://www.amazon.de/dp/B00T99AYPY", 
+      "URL": "http://www.amazon.de/dp/B00T99AYPY",
+      "IMG": "B00T99AYPY.jpg",
       "AVAILABILITY": null
   }
 ]

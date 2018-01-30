@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "type": "style",
+    "src": "../../assets/hemd_men_kariert.jpg",
+    "alt": "Karohemd kariert"
+  },
+  {
+    "id": "2",
+    "type": "style",
+    "src": "../../assets/hemd_men_gestreift.jpg",
+    "alt": "Streifen gestreift"
+  }
+]

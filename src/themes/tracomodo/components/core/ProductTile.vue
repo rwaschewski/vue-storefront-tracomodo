@@ -1,20 +1,20 @@
 <template>
   <div class="product align-center p15">
     <span @click.capture="preventClicks">
-      <router-link :to="{ name: product.type_id + '-product', params: { parentSku: product.parentSku ? product.parentSku : product.sku, slug: product.slug, childSku: product.sku }}">
+      <a target="_blank" :href="product.URL">
         <div class="product-image">
           <transition name="fade" appear>
-            <img v-if="instant" :src="thumbnail" :key="thumbnail"/>
-            <img v-if="!instant" v-lazy="thumbnail" :key="thumbnail"/>
+            <img v-if="instant" :src="thumbnailPath" :key="thumbnailPath"/>
+            <img v-if="!instant" v-lazy="thumbnailPath" :key="thumbnailPath"/>
           </transition>
         </div>
-        <p class="mb0">{{ product.name | htmlDecode }}</p>
+        <p class="mb0">{{ product.NAME | htmlDecode }}</p>
 
-        <span class="price-special lh30 c-gray" v-if="product.special_price">{{ product.priceInclTax | price }}</span>
-        <span class="price-original lh30 c-gray" v-if="product.special_price">{{ product.originalPriceInclTax | price }}</span>
+        <span class="price-special lh30 c-gray" v-if="product.SALE_PRICE !== product.ORIGINAL_PRICE">{{ product.SALE_PRICE}}</span>
+        <span class="price-original lh30 c-gray" v-if="product.SALE_PRICE !== product.ORIGINAL_PRICE">{{ product.ORIGINAL_PRICE}}</span>
 
-        <span class="lh30 c-gray" v-if="!product.special_price" >{{ product.priceInclTax | price }}</span>
-      </router-link>
+        <span class="lh30 c-gray" v-if="product.SALE_PRICE === product.ORIGINAL_PRICE " >{{ product.ORIGINAL_PRICE}}</span>
+     </a>
     </span>
   </div>
 </template>
@@ -37,7 +37,8 @@ export default {
   },
   data () {
     return {
-      clicks: 0
+      clicks: 0,
+      thumbnailPath: '../../../../../../assets/products/' + this.product.IMG
     }
   },
   methods: {

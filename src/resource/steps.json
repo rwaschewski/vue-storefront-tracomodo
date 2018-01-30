@@ -10,7 +10,7 @@
       "name": "style",
       "route_link": "/questionaire/style",
       "previous_route": "/questionaire/gender",
-      "next_route": "/checkout"
+      "next_route": "/suggestions"
     }
   ]
 }

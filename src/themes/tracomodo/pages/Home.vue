@@ -4,6 +4,7 @@
   
   <section class="container">
     <div>
+      <router-link :to="'/suggestions'">Produkte</router-link>
       <header class="col-md-12 pt40">
         <h2 class="align-center">Neuheiten</h2>
       </header>

@@ -1,6 +1,6 @@
 <template>
   <div class="product-listing row start-xs">
-    <div v-for="(product, key) in products" :key="product.id" :class="'col-md-' + (12/columns)%10">
+    <div v-for="(product, key) in products" :key="product.ASIN" :class="'col-md-' + (12/columns)%10">
       <product-tile :product="product" :instant='key < 6 ? true : false' />
     </div>
   </div>

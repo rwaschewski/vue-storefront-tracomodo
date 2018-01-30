@@ -3,7 +3,9 @@
     <div class="styleChoice">
       <header class="col-md-12">
         <h2>Welchen Style bevorzugen Sie?</h2>
+        <h4>Lederhosen Art</h4>
       </header>
+
       <div class="answer-wrapper" v-if="isMale">
         <vue-select-image class="images" 
                           :dataImages="maleStyleImages"
@@ -12,6 +14,11 @@
         <!-- <div class="label">
           <label for="images" class="col-xs-3" v-for="style in maleStyleImages" :key="style">{{ style.alt }} </label>
         </div> -->
+        <h4>Hemd Art</h4>
+        <vue-select-image class="images"
+                          :dataImages="shirtStyleImages"
+                          @onSelectImage="onSelectImage">
+        </vue-select-image>
       </div>
       <div class="answer-wrapper" v-else>
         <vue-select-image class="images" 
@@ -46,10 +53,11 @@
 </template>
 <script>
 import VueSelectImage from 'vue-select-image'
-import styleOptionsMale from '../../../../../../resource/options_styles_male.json'
-import styleOptionsFemale from '../../../../../../resource/options_styles_female.json'
+import maleStyleImages from '../../../../../../resource/options_styles_male.json'
+import femaleStyleImages from '../../../../../../resource/options_styles_female.json'
 import maleColorOptions from '../../../../../../resource/options_colors_male.json'
 import femaleColorOptions from '../../../../../../resource/options_colors_female.json'
+import shirtStyleImages from '../../../../../../resource/style_hemd_male.json'
 
 export default {
   components: {
@@ -57,10 +65,11 @@ export default {
   },
   data () {
     return {
-      maleStyleImages: styleOptionsMale,
-      femaleStyleImages: styleOptionsFemale,
+      maleStyleImages,
+      femaleStyleImages,
       maleColorOptions,
       femaleColorOptions,
+      shirtStyleImages,
       imageSelected: {
         id: '',
         type: '',
@@ -79,7 +88,7 @@ export default {
     onSelectMultipleImage: function (data) {
       this.imageMultipleSelected = data
       this.$store.commit('options/ADD_COLOR', { color: this.imageMultipleSelected })
-      console.log(this.$store.getters['options/colors'])
+      console.log(this.imageMultipleSelected)
     }
   },
   computed: {

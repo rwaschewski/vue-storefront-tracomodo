@@ -7,7 +7,8 @@
       "ASIN": "B01N4EQ1FK",
       "COLOR": "Hellbraun", 
       "SALE_PRICE": "EUR 34,90", 
-      "URL": "http://www.amazon.de/dp/B01N4EQ1FK", 
+      "URL": "http://www.amazon.de/dp/B01N4EQ1FK",
+      "IMG": "B01N4EQ1FK.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -18,7 +19,8 @@
       "ASIN": "B01N5CQNQ5",
       "COLOR": "Hellbraun", 
       "SALE_PRICE": "EUR 34,90", 
-      "URL": "http://www.amazon.de/dp/B01N5CQNQ5", 
+      "URL": "http://www.amazon.de/dp/B01N5CQNQ5",
+      "IMG": "B01N5CQNQ5.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -29,7 +31,8 @@
       "ASIN": "B01MYXIPAK",
       "COLOR": "Rot", 
       "SALE_PRICE": "EUR 29,90", 
-      "URL": "http://www.amazon.de/dp/B01MYXIPAK", 
+      "URL": "http://www.amazon.de/dp/B01MYXIPAK",
+      "IMG": "B01MYXIPAK.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -40,7 +43,8 @@
       "ASIN": "B0093LT38M",
       "COLOR": "Schwarz (Schwarz 050)", 
       "SALE_PRICE": "EUR 34,90 - EUR 59,00", 
-      "URL": "http://www.amazon.de/dp/B0093LT38M", 
+      "URL": "http://www.amazon.de/dp/B0093LT38M",
+      "IMG": "B0093LT38M.jpg",
       "AVAILABILITY": null
   }, 
   {
@@ -51,7 +55,8 @@
       "ASIN": "B01M1UY3S1",
       "COLOR": "Hellbraun",
       "SALE_PRICE": "EUR 69,90", 
-      "URL": "http://www.amazon.de/dp/B01M1UY3S1", 
+      "URL": "http://www.amazon.de/dp/B01M1UY3S1",
+      "IMG": "B01M1UY3S1.jpg",
       "AVAILABILITY": null
   }
 ]

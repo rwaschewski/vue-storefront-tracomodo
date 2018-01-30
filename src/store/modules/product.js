@@ -7,10 +7,8 @@ import { optionLabel } from 'src/store/modules/attribute'
 import { breadCrumbRoutes } from 'src/lib/filters'
 import { calculateProductTax } from 'src/lib/taxcalc'
 import _ from 'lodash'
-// import styles_men from '../../resource/options_styles_male.json'
-// import skirts from '../../resource/example_products/skirts.json'
-// import shirts_men from '../../resource/example_products/bavarianshirt_men.json'
-import pantsMen from '../../resource/example_products/leatherpants_men.json'
+import productsMen from '../../resource/example_products/products_men.json'
+import productsWomen from '../../resource/example_products/products_women.json'
 
 /**
  * Calculate taxes for specific product collection
@@ -87,20 +85,50 @@ function configureProductAsync (context, { product, configuration, selectDefault
 
 // actions
 const actions = {
-  getProducts (context, { gender, style, colors }) {
-    let products = []
+  fetchProducts (context, { gender, style, colors }) {
+    let prod
     if (gender === 'male') {
-      if (style.includes('Kniebund') || style.includes('kniebund')) {
-        pantsMen.find(function (element) {
-          if (element.NAME.includes('Kniebund') || element.NAME.includes('kniebund')) {
-            products.push(element)
-            console.log(element.NAME)
-          }
-        })
-      }
+      prod = productsMen
+      context.dispatch('findPattern', { style, colors, prod })
+    } else if (gender === 'female') {
+      prod = productsWomen
+      context.dispatch('findPattern', { style, colors, prod })
+    } else {
+      console.error('User is neither a male or a female or something went super wrong')
     }
-    context.commit(types.CATALOG_UPD_PRODUCTS, { products })
-    return products
+    /* if (gender === 'male') {
+      pantsMen.find(function (element) {
+        if (element.NAME.includes(style)) {
+          products.push(element)
+          console.log(products)
+        }
+      })
+    } else {
+
+    } */
+  },
+  findPattern (context, { style, colors, prod }) {
+    let products = []
+    let stylePatternArr = style.split(' ')
+    let colorArr = colors
+    stylePatternArr.forEach(function (item) {
+      let stylePatt = new RegExp(item, 'gi')
+      prod.find(function (element) {
+        console.log('[DEBUG(product.js:96)]: Pattern: ' + stylePatt)
+        if (element.NAME.toLowerCase().match(stylePatt)) {
+          colorArr.find(function (color) {
+            if (element.COLOR.toLowerCase().match(new RegExp(color, 'gi'))) {
+              products.push(element)
+              console.log('[DEBUG(product.js:99)]: Element: ' + element)
+              console.log('[DEBUG(product.js:100)] Products:' + products)
+            } else {
+              console.log('[DEBUG]: element does not match pattern')
+            }
+          })
+        }
+      })
+    })
+    context.commit(types.CATALOG_UPD_PRODUCTS, products)
   },
   /**
    * Reset current configuration and selected variants
@@ -239,6 +267,7 @@ const actions = {
    * @param {Int} size page size
    * @return {Promise}
    */
+
   list (context, { query, start = 0, size = 50, entityType = 'product', sort = '', cacheByKey = 'sku', prefetchGroupProducts = true, updateState = true }) {
     return quickSearchByQuery({ query, start, size, entityType, sort }).then((resp) => {
       return calculateTaxes(resp.items, context).then((updatedProducts) => {
@@ -267,7 +296,6 @@ const actions = {
       console.error(err)
     })
   },
-
   /**
    * Search products by specific field
    * @param {Object} options

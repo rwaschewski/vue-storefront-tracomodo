@@ -9,6 +9,7 @@ import PageNotFound from './pages/PageNotFound.vue'
 import UIStore from './store/ui-store'
 import Gender from './components/core/blocks/Questionaire/Gender.vue'
 import Style from './components/core/blocks/Questionaire/Style.vue'
+import SuggestedProducts from './pages/SuggestedProducts.vue'
 
 const routes = [
   { path: '/', component: Home, alias: '/pwa.html' },
@@ -25,6 +26,7 @@ const routes = [
       }
     ]
   },
+  { name: 'suggested-products', path: '/suggestions', component: SuggestedProducts },
   //  default routes
   { name: 'checkout', path: '/checkout', component: Checkout },
   { name: 'category', path: '/c/:slug', component: Category },

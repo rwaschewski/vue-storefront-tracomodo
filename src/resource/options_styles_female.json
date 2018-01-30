@@ -3,12 +3,12 @@
     "id": "3",
     "type": "style",
     "src": "../../assets/lederhose_weiblich1.jpg",
-    "alt": "dirndl"
+    "alt": "lederhose"
   },
   {
     "id": "4",
     "type": "style",
     "src": "../../assets/dirndl1.jpg",
-    "alt": "lederhose"
+    "alt": "dirndl"
   }
 ]

@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="row pb45 pt45 center-xs cool-stuff-collection">
-          <div v-for='product in products' v-bind:key='product.ASIN'>
+          <div v-for='product in products'>
             <p>{{product.NAME}}</p>
             <no-ssr>
               <carousel :perPage="5" :paginationEnabled="false" :autoplay="true" :loop="true" class="col-md-12">
@@ -44,17 +44,6 @@
       }
     },
     beforeMount () {
-      let self = this
-      self.$store.dispatch('product/getProducts', {
-        gender: self.$store.getters['options/gender'],
-        style: self.$store.getters['options/style'],
-        colors: self.$store.getters['options/colors']
-      }).then(function (res) {
-        if (res) {
-          self.products = res.products
-        }
-      })
-
       /* self.$store.dispatch('product/list', {
         query: inspirationsQuery,
         size: 12,

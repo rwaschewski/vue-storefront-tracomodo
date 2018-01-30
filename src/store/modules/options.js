@@ -1,7 +1,7 @@
 const state = {
   options: [],
-  gender: 'male',
-  style: 'Lederhose Kniebund',
+  gender: '',
+  style: '',
   colors: []
 }
 const getters = {
@@ -15,30 +15,31 @@ const mutations = {
     state.options.push({payload})
   },
   ADD_COLOR (state, payload) {
-    var color
+    var color = []
     payload.color.forEach(function (element) {
-      if (element.selected === true) {
-        color = element.alt
-      }
+      color.push(element.alt)
     })
-    state.colors.push(color)
+    state.colors = color
   },
   SET_GENDER (state, payload) {
     state.gender = payload.gender
   },
   SET_STYLE (state, payload) {
-    state.style = payload.style
+    state.style += payload.style + ' '
   }
 }
 const actions = {
+  addColor ({context}, color) {
+    context.commit('ADD_COLOR', color)
+  },
   addOption ({commit, state}, { option }) {
-    commit('options/ADD_OPTION', { option })
+    commit('ADD_OPTION', { option })
   },
   setGender ({ commit, state }, gender) {
-    commit('options/SET_GENDER', { gender })
+    commit('SET_GENDER', { gender })
   },
   setStyles (context) {
-    context.commit('options/SET_STYLE')
+    context.commit('SET_STYLE')
   }
 }
 export default {

@@ -3,24 +3,24 @@
     "id": "3",
     "type": "style",
     "src": "../../assets/lederhose_männlich1.jpg",
-    "alt": "Lederhose Kniebund"
+    "alt": "kniebund"
   },
   {
     "id": "4",
     "type": "style",
     "src": "../../assets/lederhose_männlich3.jpg",
-    "alt": "Lederhose Kurz"
+    "alt": "kurz"
   },
   {
     "id": "5",
     "type": "style",
     "src": "../../assets/lederhose_männlich2.jpg",
-    "alt": "Lederhose Lang"
+    "alt": "lang"
   },
   {
     "id": "6",
     "type": "style",
     "src": "../../assets/lederhose_männlich4.jpg",
-    "alt": "Lederhose Elegant"
+    "alt": "elegant"
   }
 ]
