@@ -1,43 +1,15 @@
-# Vue Storefront - PWA for eCommerce
-Vue Storefront is a standalone PWA storefront for your eCommerce, possible to connect with any eCommerce backend (eg. Magento, [Pimcore](https://github.com/DivanteLtd/pimcore2vuestorefront),  Prestashop or Shopware) through the API.
+#Tracomodo
+Tracomodo is the prototype of a fashion configurator for traditional costumes (bavarian style).
+This project is intended as a kind of pitch to convey the idea of the configurator and at the same time serves as the first design draft.
 
-Sign up for a demo at https://vuestorefront.io/ (Vue Storefront integrated with Magento2).
+This project is mostly based on [vue-storefront](https://github.com/DivanteLtd/vue-storefront/), but only uses a fraction of its functionality at this stage. Instead, the entire configuration process was implemented. 
+The products used are based on products of Amazon.de and are linked to the respective product page.
 
-Vue Storefront is and always will be in the open source. Anyone can use and support the project, we want it to be a tool for the improvement of the shopping experience.
-The project is still in the proof of concept phase. **We are looking for Contributors and Designer willing to help us in the solution development.**
+## Run in dev mode
+``npm run dev
 
-## Join the community on Slack
-If you have any questions or ideas feel free to join our slack: https://vuestorefront.slack.com  
-You can request joining the slack channel by dropping us a line to: *contributors@vuestorefront.io* or via [this link](https://join.slack.com/t/vuestorefront/shared_invite/enQtMjU3NjE4NTI3MTY5LTFhMmRlNGE1ZTJjZWExNGJjNmJhMDA5ZmU5YWMzOGYyMTdiODAyODZlYWE0NGNhZTYxYWYxNTcyMzdjZjYxYzg)
-
-## Documentation + table of contents
-The documentation is always THE HARDEST PART of each open source project! But we're trying hard. Please find out what we've already managed to prepare under /doc folder: https://github.com/DivanteLtd/vue-storefront/tree/master/doc
-
-* [Common problems](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Common%20problems.md)
-* [Installing on Linux/MacOS](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md)
-* [Installing on Windows](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md)
-* [Introduction to components in Vue Storefront](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/components/Introduction%20to%20components.md)
-* [Working with data](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Working%20with%20data.md)
-* [ElasticSearch data formats](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/ElasticSearch%20data%20formats.md)
-* [Working with Service Workers](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Working%20with%20service-worker.md)
-* [Working with stylesheets (CSS)](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Working%20with%20stylesheets%20(CSS).md)
-
-## The business challenges
-Vue Storefront was created to solve a set of key business challenges from the world of shopping experience. Our goal for the application is to provide the solution with:
-* The ultrafast front-end for the store - with the PWA approach we can now render the catalog of products within milliseconds;
-* The endurance for traffic overloads on the store;
-* The off-line shopping capabilities;
-* The smooth shopping experience close to the user experience from the native mobile applications;
-* The all-in-one front-end for desktop and mobile screens with no necessity for maintaining 3 or more applications for different touchpoints (web browser, Android, iOS etc.).
-
-## The technology
-Vue Storefront was build as a all-in-one front-end for eCommerce. For providing the best performance we decided to use Vue.js as a front-end library, Node.js + Express (and maybe GraphQL support) as a server-API, Elastic Search as a database of products and full PWA/off-line support.
-Here you can read more about the proof of concept for [Vue Storefront connected with Magento2](https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka).
-
-Besides a big improvement for the shopping experience, we also want to create a great code base for every developer who needs to work on a front-end application for the eCommerce.
-
-## The architecture
-![Architecture diagram](doc/media/Vue-storefront-architecture.png)
+##Technology
+This application is designed as a progressive web app ([PWA](https://developers.google.com/web/progressive-web-apps/))
 
 ## The design
 The application is prepared to be fully customized in design through theming system.
@@ -56,10 +28,7 @@ The design is available in open source in the Figma file format under the URL ht
 Vue Storefront is platform agnostic which mean - it can be connected to virtually any CMS. Please take a look at [Pimcore bridge](https://github.com/DivanteLtd/pimcore2vuestorefront) to give you an idea how other platforms can be connected. Any support for integrating Prestashop, Shopify ... - much appreciated.
 
 ## The license
-Vue Storefront source code is completely free and released under the [MIT License](https://github.com/DivanteLtd/vue-storefront/blob/master/LICENSE).
-
-## Contributing
-If you like the idea behind Vue Storefront and want to become a contributor - do not hesitate and check our [list of the active issues](https://github.com/DivanteLtd/vue-storefront/issues) or contact us directly via vuestorefront@divante.co.
+Vue Storefront Tracomodo source code is completely free and released under the [MIT License](https://github.com/rwaschewski/vue-storefront-tracomodo/blob/master/LICENSE).
 
 ## The screenshots
 
