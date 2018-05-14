@@ -11,7 +11,7 @@ The products used are based on products of Amazon.de and are linked to the respe
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:3000
 npm run dev
 
 # build for production with minification
@@ -22,8 +22,5 @@ npm run build
 This application is designed as a progressive web app ([PWA](https://developers.google.com/web/progressive-web-apps/))
 
 ## The screenshots
-
-<img width="880" alt="Vue Storefront - Annimations in the sidebar cart" src="https://user-images.githubusercontent.com/18116406/33559769-2840fb70-d90e-11e7-8f2b-298f35d1b412.gif">
-
-<img width="880" alt="Vue Storefront - Annimations on producy card" src="https://user-images.githubusercontent.com/18116406/33560504-3105dac6-d910-11e7-847d-70ef8e944321.gif">
+Any time soon
 
